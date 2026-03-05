@@ -1,0 +1,10 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq-lab
+    ports:
+      - "5672:5672"   # Puerto de comunicacion AMQP (Java)
+      - "15672:15672" # Puerto de la interfaz web
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
